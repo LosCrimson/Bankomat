@@ -43,11 +43,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IObject.cs" />
+    <Compile Include="Interfaces\IRepo.cs" />
+    <Compile Include="Models\ActionTypes.cs" />
+    <Compile Include="Models\Card.cs" />
+    <Compile Include="Models\Transaction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repos\CardRepo.cs" />
+    <Compile Include="Repos\MoneyAmmountRepo.cs" />
+    <Compile Include="Repos\PasswordRepo.cs" />
+    <Compile Include="Repos\TransactionRepo.cs" />
+    <Compile Include="Services\CardService.cs" />
+    <Compile Include="Services\UIService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
