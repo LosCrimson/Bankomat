@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Bankomat.Interfaces
 {
-    internal interface ICard
+    public interface ICardsData
     {
+        Guid Guid { get; set; }
     }
 }

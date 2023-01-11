@@ -29,7 +29,7 @@ namespace Bankomat.Services
             Console.WriteLine("Balance: " + moneyInBank + "eu");
         }
 
-        public void LastFiveTransacions(List<Transaction> lastFiveTransactions) 
+        public void LastFiveTransacions(List<CardTransaction> lastFiveTransactions) 
         {
             int i = 0;
             Console.WriteLine("These are the last five transactions:");
@@ -80,7 +80,7 @@ namespace Bankomat.Services
                 switch (UIService.GetActionTypes())
                 {
                     case ActionTypes.CHECK:
-                        SeeBalance(25.63);
+                        
                         break;
                     case ActionTypes.LAST:
                         

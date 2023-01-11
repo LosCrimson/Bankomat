@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Bankomat.Models
 {
-    internal class CardBalance
+    public class CardBalance : CardsData
     {
+        private double _balance;
+
+        public double Balance { get { return _balance; } set { _balance = value; } }
+
+        public CardBalance(Guid guid, double balance) 
+        {
+            Guid = guid;
+            _balance = balance;
+        }
     }
 }

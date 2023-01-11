@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Bankomat.Interfaces
 {
-    public interface IRepo
+    public interface IRepo<T>
     {
+        List<T> Retrieve(List<T> list);
+        T Retrieve(Guid id, List<T> list);
     }
 }
