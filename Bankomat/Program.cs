@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bankomat.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,11 @@ namespace Bankomat
     {
         static void Main(string[] args)
         {
+            var i = new UIService();
+            var card = new CardService();
+            card.IsCardCorrect();
+            i.RequestCardGUID();
+            i.MainMenu();
         }
     }
 }
