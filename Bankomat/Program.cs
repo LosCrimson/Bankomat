@@ -12,6 +12,9 @@ namespace Bankomat
         static void Main(string[] args)
         {
             var i = new UIService();
+            var card = new CardService();
+            card.IsCardCorrect();
+            i.RequestCardGUID();
             i.MainMenu();
         }
     }

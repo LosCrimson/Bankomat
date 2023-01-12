@@ -1,4 +1,5 @@
 ﻿using Bankomat.Models;
+using Bankomat.Repos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,10 @@ namespace Bankomat.Services
 {
     public class UIService
     {
-
+        //CardService card = new CardService();
         public string RequestCardGUID()
         {
+            Console.WriteLine(CardRepo.CardGuids.ElementAt(0));
             Console.WriteLine("Please enter card GUID: ");
             string gUID = Console.ReadLine();
             return gUID;
@@ -80,7 +82,7 @@ namespace Bankomat.Services
                 switch (UIService.GetActionTypes())
                 {
                     case ActionTypes.CHECK:
-                        
+                        //card.CheckBalance();  
                         break;
                     case ActionTypes.LAST:
                         

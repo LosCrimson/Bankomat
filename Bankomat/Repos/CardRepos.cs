@@ -8,16 +8,15 @@ using Bankomat.Interfaces;
 
 namespace Bankomat.Repos
 {
-    public abstract class CardRepos<T> : IRepo<T>
+    public abstract class CardRepos<T>// : IRepo<T>
     {
-        public List<T> Retrieve(List<T> list) { return list; }
 
         public T Retrieve(Guid id, List<T> list)
         {
             foreach (T listItem in list)
             {
-
-                System.Reflection.PropertyInfo pi = listItem.GetType().GetProperty("guid");
+                //This basically no matter what object finds the Guid value in it.
+                System.Reflection.PropertyInfo pi = listItem.GetType().GetProperty("Guid");
                 Guid CardGuid = (Guid)pi.GetValue(listItem, null);
 
                 if (CardGuid == id)
